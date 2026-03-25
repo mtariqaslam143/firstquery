@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home dashboard</title>
+  <!---bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--jquery-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+  body {
+    transition: 0.5s;
+  }
+    .dark-mode {
+      background-color: black;
+      color: white;
+
+    }
+  
+  #fan {
+    width: 150px;
+    margin-top: 20px;
+  }
+</style>
+
+
+</head>
+<body  class="d-flex justify-content-center align-items-center vh-100">
+  <div class="text-center">
+  <h2 class="text-center">smart Home</h2>
+  
+  <!--toogle power-->
+  <button id="togglebtn" class="btn btn-dark m-2" >Toggle pawer</button>
+  <button id="hidebtn" class="btn btn-secondary m-2">Hide control</button>
+  <div>
+    <img id="fan" src="https://hidebahamas.com/wp-content/uploads/2025/07/fan.png">
+  </div>
+  </div>
+  <script>
+    $("#togglebtn").click(function() {
+      $("body").toggleClass("dark-mode");
+    });
+    //fade
+    $("#hidebtn").click(function(){
+      $("#fan").fadeToggle();
+    });
+  
+  </script>
+</body>
+</html>
